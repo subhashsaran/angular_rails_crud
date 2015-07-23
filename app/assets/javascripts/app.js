@@ -1,4 +1,4 @@
-myApp = angular.module('myApp',['ngRoute', 'templates'])
+myApp = angular.module('myApp', ['ngRoute', 'templates']);
 
 $(document).on('ready page:load', function(event) {
   angular.bootstrap(document, ['myApp'])
