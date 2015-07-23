@@ -4,15 +4,21 @@ $(document).on('ready page:load', function(event) {
   angular.bootstrap(document, ['myApp'])
 });
 
-// myApp.config(['$routeProvider',
-//   function($routeProvider) {
-//     $routeProvider.
-//       when('/', {
-//         templateUrl: 'index.html',
-//         controller: 'SomeController'
-//       }).
-//       when('/recipes/new', {
-//         templateUrl: 'new.html',
-//         controller: 'SomeOtherController'
-//       })
-//   }]);
+myApp.config(['$routeProvider',
+  function($routeProvider) {
+    $routeProvider.
+      when('/thisisme', {
+        templateUrl: '/test_go.html',
+        controller: 'RecipesController'
+      }).
+      when('/you', {
+        templateUrl: 'test_template.html'
+      })
+  }]);
+
+
+myApp.controller("RecipesController", ['$scope',
+  function($scope){
+    alert("Testing");
+  }
+]);
